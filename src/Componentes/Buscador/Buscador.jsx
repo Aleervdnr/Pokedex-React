@@ -10,7 +10,7 @@ export default function Buscador() {
       </div>
       <div className="buscador-btn">
         <button>
-          <AiOutlineSearch/>
+          <AiOutlineSearch className='buscador-icon'/>
         </button>
       </div>
     </div>

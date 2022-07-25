@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react';
 import { getPokemonData, getPokemons } from './api';
 import './App.css';
 import Buscador from './Componentes/Buscador/Buscador';
+import Paginador from './Componentes/Paginador/Paginador';
 import Pokedex from './Componentes/Pokedex/Pokedex';
 
 function App() {
@@ -22,13 +23,21 @@ function App() {
   useEffect(() => {
     fetchPokemons()
   },[page])
+
+  const nextPage = () => setPage(page + 1)
+  const prevPage = () => setPage(page - 1)
   
 
   return (
     <div className="App">
-      <Buscador/>
-      <button onClick={() => setPage(page + 1)}>+</button>
-      <button onClick={() => setPage(page - 1)}>-</button>
+      <header className="header">
+        <h1>Pokedex</h1>
+        <nav className="nav">
+          <Buscador/>
+          <Paginador nextPage={nextPage} prevPage={prevPage} />
+        </nav>
+      </header>
+
 
       <Pokedex pokemons={pokemons}/>
     </div>
