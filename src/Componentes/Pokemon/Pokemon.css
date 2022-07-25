@@ -1,0 +1,44 @@
+.pokemon{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(139, 190, 138);
+  border-radius: 5px;
+  padding: 15px 15px;
+}
+
+.types{
+  display: flex;
+  margin-top: 5px;
+}
+
+.type{
+  background-color: aqua;
+  padding: 0 5px;
+  margin-right: 5px;
+  text-transform: capitalize;
+  border-radius: 4px;
+}
+
+.pokemon img {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  right: 10px;
+  top: -10px;
+  transition: transform .7s ;
+}
+
+.pokemon:hover > .pokemon-img{
+  transform: scale(1.1) translateX(10px);
+}
+
+.pokemon h2{
+  color: white;
+  text-transform: capitalize;
+}
+
+.poke-id{
+  font-weight: bold;
+}
