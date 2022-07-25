@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: rgb(139, 190, 138);
   border-radius: 5px;
   padding: 15px 15px;
 }
@@ -14,8 +13,8 @@
 }
 
 .type{
-  background-color: aqua;
-  padding: 0 5px;
+  color: white;
+  padding: 2px 5px;
   margin-right: 5px;
   text-transform: capitalize;
   border-radius: 4px;
@@ -41,4 +40,169 @@
 
 .poke-id{
   font-weight: bold;
+}
+
+/*Water*/
+
+.box-water{
+  background-color: rgb(67, 154, 230);
+  
+}
+
+.type-water{
+  background-color: #82c2ff;
+}
+
+/*Grass*/
+.box-grass{
+  background-color: rgb(94, 177, 92);
+}
+
+.type-grass{
+  background: rgb(23, 143, 39);
+}
+
+/*Fire*/
+
+.box-fire{
+  background-color: rgb(255, 167, 86);
+}
+
+.type-fire{
+  background: rgb(253, 125, 36);
+}
+
+/*Bug*/
+.box-bug{
+  background: rgb(18, 160, 5)
+}
+
+.type-bug{
+  background-color: rgb(94, 177, 92);
+}
+
+/*Normal*/
+
+.box-normal{
+  background: rgb(131, 162, 227);
+}
+
+.type-normal{
+  background-color: gray;
+}
+
+/*Poison*/
+.box-poison{
+  background: rgb(117, 9, 167);
+}
+
+.type-poison{
+  background: rgb(67, 4, 97);
+}
+
+/*Electric*/
+.box-electric{
+  background-color: rgb(202, 202, 40);
+}
+
+.type-electric{
+  background-color: rgb(199, 179, 0);
+}
+
+/*Ground*/
+.box-ground{
+  background-color: rgb(202, 165, 0);
+}
+
+.type-ground{
+  background-color: rgb(161, 118, 0);
+}
+
+/*Fairy*/
+.box-fairy{
+  background-color: pink;
+}
+
+.type-fairy{
+  background-color: rgb(240, 134, 175);
+}
+
+/*Fighting*/
+.box-fighting{
+  background-color: rgb(216, 93, 93);
+}
+.type-fighting{
+  background-color: rgb(179, 69, 69);
+}
+
+/*Psychic*/
+.box-psychic{
+  background-color: orange;
+}
+
+.type-psychic{
+  background-color: rgb(179, 123, 20);
+}
+
+/*Rock*/
+.box-rock{
+  background-color: rgb(190, 160, 83);
+}
+
+.type-rock{
+  background-color: rgb(112, 80, 0);
+}
+
+/*Ghost*/
+.box-ghost{
+  background-color: blueviolet;
+}
+
+.type-ghost{
+  background-color: rgb(94, 34, 151);
+}
+
+/*Ice*/
+.box-ice{
+  background-color: lightskyblue;
+}
+
+.type-ice{
+  background-color: rgb(71, 147, 194);
+}
+
+/*Dragon*/
+.box-dragon{
+  background-color: cornflowerblue;
+}
+
+.type-dragon{
+  background-color: rgb(63, 112, 202);
+}
+
+/*Dark*/
+.box-dark{
+  background-color: dimgray;
+}
+
+.type-dark{
+  background-color: rgb(68, 64, 64);
+}
+
+/*Steel*/
+.box-steel{
+  background-color: darkcyan;
+}
+
+.type-steel{
+  background-color: rgb(12, 116, 116);
+}
+
+/*Flying*/
+.box-flying{
+  background-color: dodgerblue;
+}
+
+.type-flying{
+  background-color: rgb(19, 103, 187);
 }

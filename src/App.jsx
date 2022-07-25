@@ -67,6 +67,7 @@ function App() {
 
 
       <Pokedex pokemons={pokemons}/>
+      <Paginador nextPage={nextPage} prevPage={prevPage} page={page + 1} totalPages={totalPages} />
     </div>
   );
 }
