@@ -13,7 +13,7 @@
   width: 100%;
   height: 35px;
   padding: 10px;
-  padding-left: 25px;
+  padding-left: 30px;
   border: none;
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -37,7 +37,7 @@
 }
 
 .buscador-icon{
-  font-size: 16px;
+  font-size: 20px;
 }
 
 @media screen and (min-width:1024px) {

@@ -1,4 +1,5 @@
 .paginador{
+  align-self: end;
   display: flex;
   gap: 10px;
 }
