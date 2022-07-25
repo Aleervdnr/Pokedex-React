@@ -1,0 +1,39 @@
+.buscador{
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin: 15px 0;
+}
+
+.buscador-input{
+  width: 100%;
+}
+
+.buscador-input input{
+  width: 100%;
+  height: 25px;
+  padding: 10px;
+  padding-left: 25px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.buscador-btn button{
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width:1024px) {
+  .buscador-input input{
+    max-width: 360px;
+  }
+}

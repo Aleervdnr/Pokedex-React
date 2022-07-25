@@ -31,7 +31,7 @@
 }
 
 .pokemon:hover > .pokemon-img{
-  transform: scale(1.1) translateX(10px);
+  transform: scale(1.1) translateX(10px) translateY(-5px);
 }
 
 .pokemon h2{

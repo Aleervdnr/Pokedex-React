@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import { getPokemonData, getPokemons } from './api';
 import './App.css';
+import Buscador from './Componentes/Buscador/Buscador';
 import Pokedex from './Componentes/Pokedex/Pokedex';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <div className="App">
+      <Buscador/>
       <button onClick={() => setPage(page + 1)}>+</button>
       <button onClick={() => setPage(page - 1)}>-</button>
 
