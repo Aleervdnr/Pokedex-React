@@ -61,7 +61,16 @@ function App() {
         <h1>Pokedex</h1>
         <nav className="nav">
           <Buscador onSearch={onSearch}/>
-          <Paginador nextPage={nextPage} prevPage={prevPage} page={page + 1} totalPages={totalPages} />
+          <div className="btns-container">
+            <button>Favoritos</button>
+            <button onClick={() => fetchPokemons()}>Mostrar todos</button>
+            <Paginador 
+              nextPage={nextPage} 
+              prevPage={prevPage} 
+              page={page + 1} 
+              totalPages={totalPages} 
+            />
+          </div>
         </nav>
       </header>
 

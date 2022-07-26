@@ -22,3 +22,9 @@
   gap: 15px;
 
 }
+
+.btns-container{
+  display: flex;
+  justify-content: end;
+  gap: 7px;
+}
