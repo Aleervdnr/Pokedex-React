@@ -9,9 +9,11 @@ function App() {
   const [pokemons, setPokemons] = useState([])
   const [page, setPage] = useState(0)
   const [totalPages, setTotalPages] = useState(0)
+  const [loading, setLoading] = useState(false)
 
   const fetchPokemons = async () => {
     try{
+      setLoading(true)
       const data = await getPokemons(24,24 * page)
       const promises = data.results.map(async (pokemon) => {
         return await getPokemonData(pokemon.url)
@@ -19,6 +21,7 @@ function App() {
       const results = await Promise.all(promises)
       setPokemons(results)
       setTotalPages(Math.ceil(data.count / 24))
+      setLoading(false)
     }catch(err){}
   }
 
@@ -73,9 +76,12 @@ function App() {
           </div>
         </nav>
       </header>
-
-
-      <Pokedex pokemons={pokemons}/>
+      {
+        loading ? 
+        "Cargando..." 
+        : 
+        <Pokedex pokemons={pokemons}/>
+      }
       <Paginador nextPage={nextPage} prevPage={prevPage} page={page + 1} totalPages={totalPages} />
     </div>
   );
