@@ -1,12 +1,16 @@
 import React from 'react'
 import "./Pokemon.css"
+import {AiOutlineHeart} from "react-icons/ai"
 
 export default function Pokemon({pokemon}) {
   const type = pokemon.types[0].type.name
   return (
     <div className={`pokemon box-${type}`}>
-      <div className="poke-text">
-        <span className='poke-id'>#{pokemon.id}</span>      
+      <div className="poke-container">
+        
+          <span className='poke-id'>#{pokemon.id}</span>
+          <span className="heart">🤍</span>
+        
         <h2>{pokemon.name}</h2>
         <div className="types">
           {pokemon.types.map((types) => {
