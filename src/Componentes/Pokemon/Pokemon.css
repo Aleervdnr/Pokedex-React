@@ -5,6 +5,7 @@
   width: 100%;
   border-radius: 5px;
   padding: 15px 15px;
+  z-index: 1;
 }
 
 .poke-container-top{
@@ -46,6 +47,7 @@
 .pokemon h2{
   color: white;
   text-transform: capitalize;
+  z-index: 10;
 }
 
 .poke-id{
@@ -55,6 +57,7 @@
   color: rgba(0, 0, 0, .3);
   font-weight: bold;
   font-size: 50px;
+  z-index: -1;
 }
 
 /*Water*/

@@ -28,3 +28,7 @@
   justify-content: end;
   gap: 7px;
 }
+
+.arrow{
+  font-size: 16px;
+}

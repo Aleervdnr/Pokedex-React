@@ -4,12 +4,15 @@ import './App.css';
 import Buscador from './Componentes/Buscador/Buscador';
 import Paginador from './Componentes/Paginador/Paginador';
 import Pokedex from './Componentes/Pokedex/Pokedex';
+import {FavoriteProvider} from "./Context/FavoriteContext"
+import {AiOutlineDoubleRight,AiOutlineDoubleLeft} from "react-icons/ai"
 
 function App() {
   const [pokemons, setPokemons] = useState([])
   const [page, setPage] = useState(0)
   const [totalPages, setTotalPages] = useState(0)
   const [loading, setLoading] = useState(false)
+  const [favorites, setFavorites] = useState([])
 
   const fetchPokemons = async () => {
     try{
@@ -54,11 +57,25 @@ function App() {
       setPage(0)
       setTotalPages(1)
     }
+  }
 
+  const updateFavoritePokemons = (name) =>{
+    const update = [...favorites]
+    const isFavorite = favorites.indexOf(name)
+    if(isFavorite >= 0){
+     update.splice(isFavorite,1)  
+    }else{
+      update.push(name)
+    }
+    setFavorites(update)
   }
   
 
   return (
+    <FavoriteProvider value={{
+      favoritePokemons: favorites,
+      updateFavoritePokemon: updateFavoritePokemons
+    }}>
     <div className="App">
       <header className="header">
         <h1>Pokedex</h1>
@@ -67,12 +84,14 @@ function App() {
           <div className="btns-container">
             <button>Favoritos</button>
             <button onClick={() => fetchPokemons()}>Mostrar todos</button>
+            <button onClick={()=>setPage(0)}><AiOutlineDoubleLeft/></button>
             <Paginador 
               nextPage={nextPage} 
               prevPage={prevPage} 
               page={page + 1} 
               totalPages={totalPages} 
             />
+            <button onClick={()=>setPage(48)}><AiOutlineDoubleRight/></button>
           </div>
         </nav>
       </header>
@@ -84,6 +103,7 @@ function App() {
       }
       <Paginador nextPage={nextPage} prevPage={prevPage} page={page + 1} totalPages={totalPages} />
     </div>
+    </FavoriteProvider>
   );
 }
 
