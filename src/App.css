@@ -23,12 +23,35 @@
 
 }
 
+.nav-row{
+  display: grid;
+  grid-template-columns: 1fr 65px;
+}
+
+.favorites{
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 5px;
+}
+
 .btns-container{
   display: flex;
-  justify-content: end;
-  gap: 7px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.btns-row{
+  display: flex;
+  gap: 5px;
 }
 
 .arrow{
   font-size: 16px;
+}
+
+.container{
+  align-self: end;
+  display: flex;
+  gap: 5px;
 }
